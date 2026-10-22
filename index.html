@@ -4,245 +4,326 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-es="Velazquez Grau Law Firm | Abogados en Caguas, Puerto Rico" data-en="Velazquez Grau Law Firm | Attorneys in Caguas, Puerto Rico">Velazquez Grau Law Firm | Abogados en Caguas, Puerto Rico</title>
-<meta name="description" content="Defensa contra ejecuciones de hipoteca, derecho de familia, civil, penal y trabajo notarial en Caguas, Puerto Rico. / Foreclosure defense, family, civil, criminal and notarial law in Caguas, Puerto Rico.">
+<meta name="description" content="Defensa contra ejecuciones de hipoteca, derecho de familia, civil, penal y notarial en Caguas, Puerto Rico. / Foreclosure defense, family, civil, criminal and notarial law in Caguas, Puerto Rico.">
 <link rel="icon" href="assets/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 <style>
-:root{
-  --ink:#0b1530; --navy:#101e3f; --navy-2:#1a2a52; --steel:#c4cad6; --grey:#8791a5;
-  --mist:#eef0f4; --white:#fff; --text:#1d2740; --muted:#5b6578;
-  --max:1120px; --pad:clamp(20px,5vw,48px);
-}
+:root{--ink:#0b1530;--deep:#070e22;--navy:#101e3f;--navy2:#1a2a52;--steel:#c4cad6;--grey:#8791a5;--mist:#eef0f4;--text:#1d2740;--muted:#5b6578;--max:1160px;--pad:clamp(20px,5vw,48px);--serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--sans);color:var(--text);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
 html[data-lang=es] [lang=en],html[data-lang=en] [lang=es]{display:none}
-a{color:inherit}
-img{max-width:100%;display:block}
+a{color:inherit}img{max-width:100%;display:block}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 :focus-visible{outline:3px solid var(--steel);outline-offset:3px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--white);color:var(--ink);padding:8px 14px;z-index:20}
-.skip:focus{left:8px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:var(--ink);padding:8px 14px;z-index:30}.skip:focus{left:8px}
+.kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--grey);display:flex;align-items:center;gap:14px}
+.kicker::before{content:"";width:34px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;color:var(--ink)}
+h2{font-size:clamp(1.9rem,3.8vw,2.9rem);line-height:1.12;margin-top:14px;max-width:18em}
+em{font-style:italic}
+.btn{display:inline-block;font:inherit;font-size:.92rem;font-weight:600;letter-spacing:.03em;text-decoration:none;padding:15px 28px;border:1px solid var(--steel);border-radius:0;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn-solid{background:var(--steel);color:var(--ink)}.btn-solid:hover{background:#fff}
+.btn-line{color:#fff;background:none}.btn-line:hover{background:rgba(196,202,214,.14)}
+.btn-dark{background:var(--navy);border-color:var(--navy);color:#fff}.btn-dark:hover{background:var(--navy2)}
+.arrow{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}.arrow::after{content:" \2192"}
 
-/* header */
-.site-header{background:var(--ink);color:var(--white);position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(196,202,214,.18)}
-.bar{display:flex;align-items:center;gap:24px;min-height:72px;flex-wrap:wrap;padding-block:8px}
+/* utility bar + header */
+.util{background:var(--deep);color:var(--grey);font-size:.82rem}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:16px}
+.util a{text-decoration:none;color:var(--steel)}.util a:hover{color:#fff}
+.util .r{display:flex;align-items:center;gap:22px}
+.lang{background:none;border:0;border-left:1px solid rgba(196,202,214,.3);padding-left:20px;color:var(--steel);font:inherit;cursor:pointer}.lang:hover{color:#fff}
+.site-header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(196,202,214,.16);transition:box-shadow .3s}
+.site-header.stuck{box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.bar{display:flex;align-items:center;gap:28px;min-height:78px}
 .brand{display:flex;align-items:center;gap:14px;text-decoration:none;margin-right:auto}
-.brand img{height:42px;width:auto}
-.brand span{font-weight:600;font-stretch:112%;letter-spacing:.02em;line-height:1.15;font-size:1rem}
-.brand small{display:block;font-weight:400;font-size:.78rem;color:var(--steel);letter-spacing:.04em}
-nav ul{display:flex;gap:26px;list-style:none;padding:0}
-nav a{text-decoration:none;font-size:.95rem;color:var(--steel);padding:6px 0;border-bottom:2px solid transparent}
-nav a:hover,nav a[aria-current]{color:var(--white);border-color:var(--steel)}
-.lang{background:none;border:1px solid rgba(196,202,214,.45);color:var(--steel);font:inherit;font-size:.85rem;padding:6px 12px;border-radius:2px;cursor:pointer}
-.lang:hover{color:var(--white);border-color:var(--white)}
-
-/* buttons */
-.btn{display:inline-block;font:inherit;font-weight:600;text-decoration:none;padding:14px 26px;border-radius:2px;border:1.5px solid var(--steel);transition:background .2s,color .2s}
-.btn-solid{background:var(--steel);color:var(--ink)}
-.btn-solid:hover{background:var(--white)}
-.btn-line{color:var(--white)}
-.btn-line:hover{background:rgba(196,202,214,.15)}
-.btn-dark{background:var(--navy);color:var(--white);border-color:var(--navy)}
-.btn-dark:hover{background:var(--navy-2)}
+.brand img{height:44px;width:auto}
+.brand span{font-family:var(--serif);font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase;line-height:1.1}
+.brand small{display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.34em;color:var(--steel);margin-top:3px}
+nav ul{display:flex;gap:34px;list-style:none;padding:0}
+nav a{text-decoration:none;font-size:.9rem;color:var(--steel);padding:8px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+nav a:hover{color:#fff;border-color:var(--steel)}
+.menu-btn{display:none;background:none;border:1px solid rgba(196,202,214,.4);color:#fff;font:inherit;padding:8px 14px;cursor:pointer}
+.bar .btn{padding:11px 22px}
 
 /* hero */
-.hero{background:linear-gradient(160deg,var(--ink) 30%,var(--navy) 100%);color:var(--white);position:relative;overflow:hidden}
-.hero .wrap{position:relative;padding-block:clamp(72px,12vw,150px)}
-.hero h1{font-size:clamp(2.2rem,5.6vw,4.2rem);line-height:1.06;font-weight:600;font-stretch:112%;letter-spacing:-.01em;max-width:15em}
-.hero p{margin-top:26px;max-width:36em;font-size:1.125rem;color:var(--steel)}
-.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
-.tri{position:absolute;right:-6%;top:50%;width:min(62vw,640px);transform:translateY(-50%);opacity:.5;pointer-events:none}
-.tri polygon{fill:none;stroke:var(--steel);stroke-width:1.5;stroke-dasharray:1;stroke-dashoffset:0}
+.hero{background:linear-gradient(155deg,var(--ink) 35%,var(--navy) 100%);color:#fff;position:relative;overflow:hidden}
+.hero .main{position:relative;padding-block:clamp(80px,12vw,150px) clamp(60px,8vw,100px)}
+.hero h1{color:#fff;font-size:clamp(2.7rem,7vw,5.6rem);line-height:1.02;max-width:11em;margin-top:26px}
+.hero h1 em{color:var(--steel)}
+.hero p.sub{margin-top:28px;max-width:34em;font-size:1.12rem;color:var(--steel)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.tri{position:absolute;right:-5%;top:48%;width:min(60vw,660px);transform:translateY(-50%);opacity:.5;pointer-events:none}
+.tri polygon{fill:none;stroke:var(--steel);stroke-width:1.2;stroke-dasharray:1;stroke-dashoffset:0}
 .tri polygon+polygon{stroke:var(--grey);opacity:.7}
-@media (prefers-reduced-motion:no-preference){
-  .tri polygon{animation:draw 2.4s ease-out both}
-  .tri polygon+polygon{animation-delay:.5s}
-  @keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-}
+.facts{border-top:1px solid rgba(196,202,214,.22);position:relative}
+.facts .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.facts div{padding:26px 24px 26px 0;display:flex;align-items:baseline;gap:16px}
+.facts div+div{padding-left:28px;border-left:1px solid rgba(196,202,214,.22)}
+.facts b{font-family:var(--serif);font-weight:400;font-size:2.3rem;color:#fff;line-height:1}
+.facts span{font-size:.85rem;color:var(--steel);line-height:1.35}
 
-/* sections */
-section{padding-block:clamp(56px,9vw,104px)}
-h2{font-size:clamp(1.6rem,3.4vw,2.3rem);line-height:1.15;font-weight:600;font-stretch:108%;color:var(--ink);max-width:18em}
-.lead{margin-top:14px;color:var(--muted);max-width:40em}
+section{padding-block:clamp(64px,9vw,116px)}
+.intro .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,6vw,90px);align-items:end}
+.intro h2{max-width:14em}
+.intro p{color:var(--muted);margin-bottom:22px;font-size:1.05rem}
 
 /* practice areas */
 .areas{background:var(--mist)}
-.areas-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,56px);margin-top:44px;align-items:start}
-.flagship{background:var(--navy);color:var(--white);padding:clamp(28px,4vw,44px);border-left:4px solid var(--steel)}
-.flagship h3{font-size:1.6rem;font-weight:600;font-stretch:108%;line-height:1.2}
-.flagship p{margin-top:14px;color:var(--steel)}
-.flagship ul{margin:22px 0 28px;padding-left:20px;color:var(--steel)}
-.flagship li{margin-bottom:8px}
-.area-list{list-style:none;padding:0}
-.area-list li{border-top:1.5px solid var(--navy-2);padding:20px 0}
-.area-list li:last-child{border-bottom:1.5px solid var(--navy-2)}
-.area-list h3{font-size:1.15rem;font-weight:600;color:var(--ink)}
-.area-list p{margin-top:4px;color:var(--muted);font-size:.98rem}
+.tabwrap{display:grid;grid-template-columns:5fr 7fr;margin-top:52px;background:#fff;box-shadow:0 1px 0 rgba(16,30,63,.08)}
+.tabs{display:flex;flex-direction:column}
+.tab{display:flex;align-items:baseline;gap:18px;text-align:left;background:none;border:0;border-bottom:1px solid #dde1e9;padding:26px 30px;font-family:var(--serif);font-size:1.45rem;color:var(--ink);cursor:pointer;transition:background .2s,padding .25s,color .2s;position:relative}
+.tab b{font-family:var(--sans);font-size:.75rem;letter-spacing:.14em;color:var(--grey);font-weight:600}
+.tab:hover{background:var(--mist);padding-left:38px}
+.tab[aria-selected=true]{background:var(--navy);color:#fff;padding-left:38px}
+.tab[aria-selected=true] b{color:var(--steel)}
+.tab[aria-selected=true]::after{content:"";position:absolute;right:-1px;top:0;bottom:0;width:3px;background:var(--steel)}
+.panel{background:var(--navy);color:#fff;padding:clamp(30px,5vw,60px);display:flex;flex-direction:column;justify-content:center}
+.panel[hidden]{display:none}
+.panel .tag{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+.panel p{font-family:var(--serif);font-size:clamp(1.25rem,2.2vw,1.65rem);line-height:1.4;margin:14px 0 24px;color:#fff}
+.panel ul{list-style:none;padding:0;margin-bottom:34px;color:var(--steel)}
+.panel li{padding:11px 0 11px 26px;border-top:1px solid rgba(196,202,214,.2);position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:21px;width:12px;height:1px;background:var(--steel)}
+.panel:not([hidden]){animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-/* steps */
-.steps{list-style:none;padding:0;margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,48px);counter-reset:s}
-.steps li{counter-increment:s;border-top:3px solid var(--navy);padding-top:18px}
-.steps li::before{content:counter(s);font-weight:700;font-size:2rem;color:var(--grey);font-stretch:112%}
-.steps h3{font-size:1.15rem;margin:6px 0;color:var(--ink)}
-.steps p{color:var(--muted)}
+/* attorney */
+.attorney .wrap{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,6vw,90px);align-items:center}
+.portrait{aspect-ratio:4/5;background:linear-gradient(160deg,var(--navy2),var(--ink));display:grid;place-items:center;position:relative}
+.portrait img{width:56%;opacity:.85}
+.portrait::after{content:"";position:absolute;inset:14px;border:1px solid rgba(196,202,214,.3)}
+.attorney h2{font-size:clamp(1.8rem,3.2vw,2.5rem)}
+.attorney p{margin:18px 0;color:var(--muted);max-width:36em}
+.ph{background:#fff3c4;padding:0 4px;color:var(--ink)}
 
-/* about */
-.about{background:var(--ink);color:var(--white)}
-.about .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(28px,6vw,80px);align-items:center}
-.about img{width:min(100%,360px);height:auto;margin-inline:auto}
-.about h2{color:var(--white)}
-.about p{margin:16px 0 28px;color:var(--steel);max-width:36em}
+/* approach */
+.approach{background:var(--ink);color:#fff}
+.approach h2{color:#fff}
+.steps{list-style:none;padding:0;margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);counter-reset:s}
+.steps li{counter-increment:s;border-top:1px solid rgba(196,202,214,.3);padding-top:22px}
+.steps li::before{content:"0" counter(s);font-family:var(--serif);font-size:2.4rem;color:var(--grey);line-height:1}
+.steps h3{color:#fff;font-size:1.4rem;margin:12px 0 8px}
+.steps p{color:var(--steel)}
+
+/* resources */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.card{border-top:3px solid var(--navy);padding-top:20px;transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card .tag{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);font-weight:600}
+.card h3{font-size:1.4rem;line-height:1.25;margin:10px 0}
+.card p{color:var(--muted);font-size:.95rem}
 
 /* contact */
-.contact dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px 40px;margin-top:40px}
-.contact dt{font-size:.9rem;color:var(--muted)}
-.contact dd{font-weight:600;font-size:1.1rem;color:var(--ink);margin-top:2px}
-.contact dd a{text-decoration:none;border-bottom:1.5px solid var(--steel)}
-.ph{background:#fff3c4;padding:0 4px}
+.contact{background:var(--navy);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,6vw,90px)}
+.contact h2{color:#fff;max-width:11em}
+.contact .kicker{color:var(--steel)}
+.contact p.lead{margin:18px 0 32px;color:var(--steel);max-width:30em}
+dl{display:grid;gap:0}
+dl div{padding:18px 0;border-top:1px solid rgba(196,202,214,.25)}
+dt{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+dd{font-family:var(--serif);font-size:1.3rem;margin-top:2px}
+dd a{text-decoration:none}dd a:hover{border-bottom:1px solid var(--steel)}
+.contact .ph{background:rgba(255,243,196,.9)}
 
-/* footer */
-footer{background:var(--ink);color:var(--grey);padding-block:36px;font-size:.85rem}
-footer .wrap{display:grid;gap:12px}
-footer p{max-width:60em}
+footer{background:var(--deep);color:var(--grey);padding-block:56px 32px;font-size:.88rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(196,202,214,.15)}
+footer .brand{margin-bottom:16px}
+footer h4{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:12px;font-weight:600}
+footer ul{list-style:none;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.legal{padding-top:26px;display:grid;gap:10px}.legal p{max-width:62em}
 
-@media (max-width:820px){
-  .areas-grid,.about .wrap,.steps{grid-template-columns:1fr}
-  .bar{gap:12px}
-  nav{order:3;width:100%;overflow-x:auto}
-  nav ul{gap:20px;white-space:nowrap}
-  .tri{opacity:.25;right:-30%}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){.tri polygon{animation:draw 2.6s ease-out both}.tri polygon+polygon{animation-delay:.5s}@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (max-width:900px){
+ .menu-btn{display:block}.bar .btn{display:none}
+ nav{position:absolute;left:0;right:0;top:100%;background:var(--ink);border-bottom:1px solid rgba(196,202,214,.16);display:none}
+ .open nav{display:block}nav ul{flex-direction:column;gap:0;padding:8px var(--pad) 18px}nav a{display:block;padding:14px 0;border-bottom:1px solid rgba(196,202,214,.12)}
+ .site-header .wrap{position:relative}
+ .intro .wrap,.attorney .wrap,.contact .wrap,.tabwrap,.steps,.cards,.fgrid{grid-template-columns:1fr}
+ .tabs{flex-direction:row;overflow-x:auto}.tab{white-space:nowrap;padding:20px 22px;font-size:1.15rem;border-bottom:0;border-right:1px solid #dde1e9}
+ .tab:hover,.tab[aria-selected=true]{padding-left:22px}.tab[aria-selected=true]::after{right:0;left:0;top:auto;bottom:0;width:auto;height:3px}
+ .facts .wrap{grid-template-columns:1fr}.facts div+div{padding-left:0;border-left:0;border-top:1px solid rgba(196,202,214,.22)}
+ .tri{opacity:.22;right:-35%}.portrait{max-width:340px}
+ .util .hide-sm{display:none}
 }
-
 </style>
 </head>
 <body>
 <a class="skip" href="#main"><span lang="es">Ir al contenido</span><span lang="en">Skip to content</span></a>
 
-<header class="site-header">
+<div class="util"><div class="wrap">
+  <span class="hide-sm">Caguas, Puerto Rico</span>
+  <div class="r"><a href="tel:+17870000000"><span class="ph">[787-000-0000]</span></a><button class="lang" id="lang" type="button">English</button></div>
+</div></div>
+
+<header class="site-header" id="top">
   <div class="wrap bar">
-    <a class="brand" href="index.html" aria-label="Velazquez Grau Law Firm">
-      <img src="assets/logo.png" alt="" width="62" height="42">
-      <span>Velazquez Grau<small>Law Firm · Caguas, PR</small></span>
-    </a>
-    <nav aria-label="Principal">
-      <ul>
-        <li><a href="index.html" aria-current="page"><span lang="es">Inicio</span><span lang="en">Home</span></a></li>
-        <li><a href="areas.html"><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></a></li>
-        <li><a href="nosotros.html"><span lang="es">Nosotros</span><span lang="en">About</span></a></li>
-        <li><a href="contacto.html"><span lang="es">Contacto</span><span lang="en">Contact</span></a></li>
-      </ul>
-    </nav>
-    <button class="lang" id="lang" type="button">English</button>
+    <a class="brand" href="#top" aria-label="Velazquez Grau Law Firm"><img src="assets/logo.png" alt="" width="65" height="44"><span>Velazquez Grau<small>LAW FIRM</small></span></a>
+    <nav aria-label="Principal" id="nav"><ul>
+      <li><a href="#areas"><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></a></li>
+      <li><a href="#firma"><span lang="es">La firma</span><span lang="en">The firm</span></a></li>
+      <li><a href="#equipo"><span lang="es">Equipo</span><span lang="en">Team</span></a></li>
+      <li><a href="#recursos"><span lang="es">Recursos</span><span lang="en">Resources</span></a></li>
+      <li><a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a></li>
+    </ul></nav>
+    <a class="btn btn-line" href="#contacto"><span lang="es">Solicitar consulta</span><span lang="en">Request a consultation</span></a>
+    <button class="menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="nav"><span lang="es">Menú</span><span lang="en">Menu</span></button>
   </div>
 </header>
 
 <main id="main">
 <section class="hero" style="padding:0">
-  <svg class="tri" viewBox="0 0 600 520" aria-hidden="true">
-    <polygon points="20,20 580,20 300,500" pathLength="1"/>
-    <polygon points="110,20 490,20 300,370" pathLength="1"/>
-  </svg>
-  <div class="wrap">
-    <h1><span lang="es">Defendemos su hogar y sus derechos.</span><span lang="en">We defend your home and your rights.</span></h1>
-    <p><span lang="es">Más de 20 años de práctica en Caguas. Representamos a propietarios que enfrentan una ejecución de hipoteca, y atendemos casos de familia, civiles, penales y notariales.</span><span lang="en">Over 20 years of practice in Caguas. We represent homeowners facing foreclosure, and handle family, civil, criminal and notarial matters.</span></p>
+  <svg class="tri" viewBox="0 0 600 520" aria-hidden="true"><polygon points="20,20 580,20 300,500" pathLength="1"/><polygon points="110,20 490,20 300,370" pathLength="1"/></svg>
+  <div class="wrap main">
+    <div class="kicker" style="color:var(--steel)"><span lang="es">Abogados · Caguas, Puerto Rico</span><span lang="en">Attorneys · Caguas, Puerto Rico</span></div>
+    <h1><span lang="es">Defendemos <em>su hogar</em> y sus derechos.</span><span lang="en">We defend <em>your home</em> and your rights.</span></h1>
+    <p class="sub"><span lang="es">Más de 20 años de práctica en Caguas. Representamos a propietarios que enfrentan una ejecución de hipoteca y atendemos asuntos de familia, civiles, penales y notariales.</span><span lang="en">Over 20 years of practice in Caguas. We represent homeowners facing foreclosure and handle family, civil, criminal and notarial matters.</span></p>
     <div class="cta">
       <a class="btn btn-solid" href="tel:+17870000000"><span lang="es">Llamar ahora</span><span lang="en">Call now</span></a>
       <a class="btn btn-line" href="https://wa.me/17870000000"><span lang="es">Escribir por WhatsApp</span><span lang="en">Message on WhatsApp</span></a>
     </div>
   </div>
+  <div class="facts"><div class="wrap">
+    <div><b>20+</b><span lang="es">años de práctica<br>en Caguas</span><span lang="en">years of practice<br>in Caguas</span></div>
+    <div><b>5</b><span lang="es">áreas de práctica<br>bajo un mismo techo</span><span lang="en">practice areas<br>under one roof</span></div>
+    <div><b>§</b><span lang="es">servicios notariales<br>en la oficina</span><span lang="en">notarial services<br>in our office</span></div>
+  </div></div>
 </section>
 
-<section class="areas" id="areas">
-  <div class="wrap">
-    <h2><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></h2>
-    <p class="lead"><span lang="es">Cada caso comienza con una consulta en la que revisamos su situación y le explicamos sus opciones.</span><span lang="en">Every case starts with a consultation where we review your situation and explain your options.</span></p>
-    <div class="areas-grid">
-      <article class="flagship">
-        <h3><span lang="es">Defensa contra ejecuciones de hipoteca</span><span lang="en">Foreclosure defense</span></h3>
-        <p><span lang="es">Si el banco presentó una demanda para quedarse con su casa, el tiempo cuenta. Revisamos su expediente y evaluamos las defensas y alternativas disponibles.</span><span lang="en">If the bank has filed to take your home, time matters. We review your file and evaluate the defenses and alternatives available to you.</span></p>
-        <ul>
-          <li><span lang="es">Revisión de la demanda y del historial del préstamo</span><span lang="en">Review of the complaint and loan history</span></li>
-          <li><span lang="es">Representación ante el tribunal</span><span lang="en">Representation in court</span></li>
-          <li><span lang="es">Orientación sobre alternativas y mediación</span><span lang="en">Guidance on alternatives and mediation</span></li>
-        </ul>
-        <a class="btn btn-solid" href="contacto.html"><span lang="es">Consulte su caso</span><span lang="en">Discuss your case</span></a>
-      </article>
-      <ul class="area-list">
-        <li><h3><span lang="es">Derecho de familia</span><span lang="en">Family law</span></h3><p><span lang="es">Asuntos familiares tratados con claridad y respeto.</span><span lang="en">Family matters handled with clarity and care.</span></p></li>
-        <li><h3><span lang="es">Derecho civil</span><span lang="en">Civil law</span></h3><p><span lang="es">Representación en disputas civiles ante los tribunales.</span><span lang="en">Representation in civil disputes before the courts.</span></p></li>
-        <li><h3><span lang="es">Derecho penal</span><span lang="en">Criminal law</span></h3><p><span lang="es">Defensa en procesos criminales.</span><span lang="en">Defense in criminal proceedings.</span></p></li>
-        <li><h3><span lang="es">Testamentos y trabajo notarial</span><span lang="en">Wills and notarial work</span></h3><p><span lang="es">Testamentos, escrituras y otros instrumentos notariales.</span><span lang="en">Wills, deeds and other notarial instruments.</span></p></li>
-      </ul>
+<section class="intro" id="firma"><div class="wrap">
+  <div class="rv"><div class="kicker"><span lang="es">La firma</span><span lang="en">The firm</span></div>
+  <h2><span lang="es">Experiencia local. Atención directa a cada caso.</span><span lang="en">Local experience. Direct attention to every case.</span></h2></div>
+  <div class="rv"><p><span lang="es">Velazquez Grau Law Firm es una firma de Caguas donde su caso lo atiende un equipo que conoce su nombre y su historia. Combinamos más de dos décadas de práctica con comunicación clara en cada etapa del proceso.</span><span lang="en">Velazquez Grau Law Firm is a Caguas firm where your case is handled by a team that knows your name and your story. We combine more than two decades of practice with clear communication at every stage.</span></p>
+  <a class="arrow" href="#equipo"><span lang="es">Conozca al equipo</span><span lang="en">Meet the team</span></a></div>
+</div></section>
+
+<section class="areas" id="areas"><div class="wrap">
+  <div class="rv"><div class="kicker"><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></div>
+  <h2><span lang="es">Representación en los asuntos que más importan.</span><span lang="en">Representation in the matters that matter most.</span></h2></div>
+  <div class="tabwrap rv">
+    <div class="tabs" role="tablist" aria-orientation="vertical">
+      <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true"><b>01</b><span lang="es">Defensa contra ejecuciones</span><span lang="en">Foreclosure defense</span></button>
+      <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><b>02</b><span lang="es">Derecho de familia</span><span lang="en">Family law</span></button>
+      <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><b>03</b><span lang="es">Derecho civil</span><span lang="en">Civil law</span></button>
+      <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><b>04</b><span lang="es">Derecho penal</span><span lang="en">Criminal law</span></button>
+      <button class="tab" role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1"><b>05</b><span lang="es">Testamentos y notaría</span><span lang="en">Wills and notarial work</span></button>
+    </div>
+    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
+      <div class="tag"><span lang="es">Práctica principal</span><span lang="en">Flagship practice</span></div>
+      <p><span lang="es">Si el banco presentó una demanda para quedarse con su casa, el tiempo cuenta. Evaluamos su caso, las defensas y las alternativas disponibles.</span><span lang="en">If the bank has filed to take your home, time matters. We evaluate your case, the defenses and the alternatives available.</span></p>
+      <ul><li><span lang="es">Revisión de la demanda y del historial del préstamo</span><span lang="en">Review of the complaint and loan history</span></li><li><span lang="es">Representación ante el tribunal</span><span lang="en">Representation in court</span></li><li><span lang="es">Orientación sobre alternativas y mediación</span><span lang="en">Guidance on alternatives and mediation</span></li></ul>
+      <div><a class="btn btn-solid" href="#contacto"><span lang="es">Consulte su caso</span><span lang="en">Discuss your case</span></a></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <div class="tag"><span lang="es">Familia</span><span lang="en">Family</span></div>
+      <p><span lang="es">Asuntos familiares tratados con claridad, discreción y respeto.</span><span lang="en">Family matters handled with clarity, discretion and respect.</span></p>
+      <ul><li><span lang="es">Divorcio y separación</span><span lang="en">Divorce and separation</span></li><li><span lang="es">Custodia y relaciones filiales</span><span lang="en">Custody and parenting time</span></li><li><span lang="es">Pensiones alimentarias</span><span lang="en">Child and spousal support</span></li></ul>
+      <div><a class="btn btn-solid" href="#contacto"><span lang="es">Hablar con la firma</span><span lang="en">Talk to the firm</span></a></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <div class="tag"><span lang="es">Civil</span><span lang="en">Civil</span></div>
+      <p><span lang="es">Representación en disputas civiles, desde la evaluación inicial hasta el tribunal.</span><span lang="en">Representation in civil disputes, from initial evaluation to the courtroom.</span></p>
+      <ul><li><span lang="es">Disputas contractuales</span><span lang="en">Contract disputes</span></li><li><span lang="es">Reclamaciones de daños</span><span lang="en">Damage claims</span></li><li><span lang="es">Comparecencias y mociones ante el tribunal</span><span lang="en">Court appearances and motions</span></li></ul>
+      <div><a class="btn btn-solid" href="#contacto"><span lang="es">Hablar con la firma</span><span lang="en">Talk to the firm</span></a></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+      <div class="tag"><span lang="es">Penal</span><span lang="en">Criminal</span></div>
+      <p><span lang="es">Defensa seria y confidencial en procesos criminales.</span><span lang="en">Serious, confidential defense in criminal proceedings.</span></p>
+      <ul><li><span lang="es">Defensa ante cargos criminales</span><span lang="en">Defense against criminal charges</span></li><li><span lang="es">Representación en cada etapa del proceso</span><span lang="en">Representation at every stage</span></li><li><span lang="es">Orientación sobre sus derechos</span><span lang="en">Guidance on your rights</span></li></ul>
+      <div><a class="btn btn-solid" href="#contacto"><span lang="es">Hablar con la firma</span><span lang="en">Talk to the firm</span></a></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+      <div class="tag"><span lang="es">Notaría</span><span lang="en">Notarial</span></div>
+      <p><span lang="es">Documentos notariales preparados con precisión para proteger a su familia y su patrimonio.</span><span lang="en">Notarial documents prepared with precision to protect your family and your property.</span></p>
+      <ul><li><span lang="es">Testamentos</span><span lang="en">Wills</span></li><li><span lang="es">Escrituras y otros instrumentos notariales</span><span lang="en">Deeds and other notarial instruments</span></li><li><span lang="es">Orientación sobre sucesiones</span><span lang="en">Guidance on estates and succession</span></li></ul>
+      <div><a class="btn btn-solid" href="#contacto"><span lang="es">Hablar con la firma</span><span lang="en">Talk to the firm</span></a></div>
     </div>
   </div>
-</section>
+</div></section>
 
-<section id="proceso">
-  <div class="wrap">
-    <h2><span lang="es">Qué esperar al contactarnos</span><span lang="en">What to expect when you contact us</span></h2>
-    <ol class="steps">
-      <li><h3><span lang="es">Consulta inicial</span><span lang="en">Initial consultation</span></h3><p><span lang="es">Nos cuenta su situación y trae los documentos que tenga a mano.</span><span lang="en">You tell us your situation and bring any documents you have.</span></p></li>
-      <li><h3><span lang="es">Evaluación y plan</span><span lang="en">Evaluation and plan</span></h3><p><span lang="es">Le explicamos sus opciones, el alcance del caso y los honorarios.</span><span lang="en">We explain your options, the scope of the case and the fees.</span></p></li>
-      <li><h3><span lang="es">Representación</span><span lang="en">Representation</span></h3><p><span lang="es">Trabajamos su caso y lo mantenemos al tanto de cada avance.</span><span lang="en">We work your case and keep you informed at each step.</span></p></li>
-    </ol>
-  </div>
-</section>
+<section class="attorney" id="equipo"><div class="wrap">
+  <div class="portrait rv" role="img" aria-label="Placeholder portrait"><img src="assets/logo.png" alt=""></div>
+  <div class="rv"><div class="kicker"><span lang="es">Abogado fundador</span><span lang="en">Founding attorney</span></div>
+  <h2><span class="ph">[Nombre del abogado]</span></h2>
+  <p><span lang="es">Con más de 20 años de práctica en Caguas, se ha dedicado a defender a propietarios frente a ejecuciones de hipoteca. Es notario y atiende también asuntos de familia, civiles y penales. <span class="ph">[Añadir formación, admisión al foro y distinciones]</span></span><span lang="en">With more than 20 years of practice in Caguas, he has devoted his career to defending homeowners against foreclosure. He is a notary and also handles family, civil and criminal matters. <span class="ph">[Add education, bar admissions and distinctions]</span></span></p>
+  <a class="arrow" href="#contacto"><span lang="es">Coordinar una consulta</span><span lang="en">Schedule a consultation</span></a></div>
+</div></section>
 
-<section class="about" id="nosotros">
-  <div class="wrap">
-    <img src="assets/logo.png" alt="Velazquez Grau Law Firm" width="665" height="451">
-    <div>
-      <h2><span lang="es">Una firma de Caguas, con más de 20 años de trayectoria.</span><span lang="en">A Caguas firm with over 20 years of practice.</span></h2>
-      <p><span lang="es">Velazquez Grau Law Firm es una firma pequeña donde su caso lo atiende un equipo que conoce su nombre y su historia.</span><span lang="en">Velazquez Grau Law Firm is a small firm where your case is handled by a team that knows your name and your story.</span></p>
-      <a class="btn btn-line" href="nosotros.html"><span lang="es">Conozca la firma</span><span lang="en">Meet the firm</span></a>
-    </div>
-  </div>
-</section>
+<section class="approach"><div class="wrap">
+  <div class="rv"><div class="kicker" style="color:var(--steel)"><span lang="es">Cómo trabajamos</span><span lang="en">How we work</span></div>
+  <h2><span lang="es">Qué esperar al contactarnos.</span><span lang="en">What to expect when you contact us.</span></h2></div>
+  <ol class="steps rv">
+    <li><h3><span lang="es">Consulta inicial</span><span lang="en">Initial consultation</span></h3><p><span lang="es">Nos cuenta su situación y trae los documentos que tenga a mano.</span><span lang="en">You tell us your situation and bring any documents you have.</span></p></li>
+    <li><h3><span lang="es">Evaluación y plan</span><span lang="en">Evaluation and plan</span></h3><p><span lang="es">Le explicamos sus opciones, el alcance del caso y los honorarios.</span><span lang="en">We explain your options, the scope of the case and the fees.</span></p></li>
+    <li><h3><span lang="es">Representación</span><span lang="en">Representation</span></h3><p><span lang="es">Trabajamos su caso y lo mantenemos al tanto de cada avance.</span><span lang="en">We work your case and keep you informed at each step.</span></p></li>
+  </ol>
+</div></section>
 
-<section class="contact" id="contacto">
-  <div class="wrap">
-    <h2><span lang="es">Hable con nosotros</span><span lang="en">Talk to us</span></h2>
-    <dl>
-      <div><dt><span lang="es">Teléfono</span><span lang="en">Phone</span></dt><dd><a href="tel:+17870000000"><span class="ph">[787-000-0000]</span></a></dd></div>
-      <div><dt>WhatsApp</dt><dd><a href="https://wa.me/17870000000"><span class="ph">[787-000-0000]</span></a></dd></div>
-      <div><dt><span lang="es">Correo electrónico</span><span lang="en">Email</span></dt><dd><span class="ph">[correo@dominio.com]</span></dd></div>
-      <div><dt><span lang="es">Oficina</span><span lang="en">Office</span></dt><dd><span class="ph">[Dirección, Caguas, PR]</span></dd></div>
-      <div><dt><span lang="es">Horario</span><span lang="en">Hours</span></dt><dd><span class="ph">[Lunes a viernes, 8:00 am – 5:00 pm]</span></dd></div>
-    </dl>
+<section id="recursos"><div class="wrap">
+  <div class="rv"><div class="kicker"><span lang="es">Recursos</span><span lang="en">Resources</span></div>
+  <h2><span lang="es">Información para tomar decisiones con confianza.</span><span lang="en">Information to help you decide with confidence.</span></h2></div>
+  <div class="cards rv">
+    <article class="card"><div class="tag"><span lang="es">Próximamente</span><span lang="en">Coming soon</span></div><h3><span lang="es">Qué esperar de un proceso de ejecución de hipoteca</span><span lang="en">What to expect in a foreclosure case</span></h3><p><span lang="es">Una guía general sobre las etapas del proceso.</span><span lang="en">A general guide to the stages of the process.</span></p></article>
+    <article class="card"><div class="tag"><span lang="es">Próximamente</span><span lang="en">Coming soon</span></div><h3><span lang="es">Por qué es importante tener un testamento</span><span lang="en">Why having a will matters</span></h3><p><span lang="es">Cómo proteger a su familia y organizar su patrimonio.</span><span lang="en">How to protect your family and organize your property.</span></p></article>
+    <article class="card"><div class="tag"><span lang="es">Próximamente</span><span lang="en">Coming soon</span></div><h3><span lang="es">Cómo prepararse para su primera consulta</span><span lang="en">How to prepare for your first consultation</span></h3><p><span lang="es">Qué documentos y preguntas llevar.</span><span lang="en">Which documents and questions to bring.</span></p></article>
   </div>
-</section>
+</div></section>
+
+<section class="contact" id="contacto"><div class="wrap">
+  <div class="rv"><div class="kicker"><span lang="es">Contacto</span><span lang="en">Contact</span></div>
+  <h2><span lang="es">Hablemos de su caso.</span><span lang="en">Let’s talk about your case.</span></h2>
+  <p class="lead"><span lang="es">Llámenos o escríbanos por WhatsApp para coordinar una consulta. Por favor, no envíe información confidencial por mensaje.</span><span lang="en">Call or message us on WhatsApp to schedule a consultation. Please do not send confidential information by message.</span></p>
+  <div class="cta" style="margin-top:0"><a class="btn btn-solid" href="tel:+17870000000"><span lang="es">Llamar ahora</span><span lang="en">Call now</span></a><a class="btn btn-line" href="https://wa.me/17870000000">WhatsApp</a></div></div>
+  <dl class="rv">
+    <div><dt><span lang="es">Teléfono</span><span lang="en">Phone</span></dt><dd><a href="tel:+17870000000"><span class="ph">[787-000-0000]</span></a></dd></div>
+    <div><dt><span lang="es">Correo electrónico</span><span lang="en">Email</span></dt><dd><span class="ph">[correo@dominio.com]</span></dd></div>
+    <div><dt><span lang="es">Oficina</span><span lang="en">Office</span></dt><dd><span class="ph">[Dirección, Caguas, PR]</span></dd></div>
+    <div><dt><span lang="es">Horario</span><span lang="en">Hours</span></dt><dd><span class="ph">[Lunes a viernes, 8:00 am – 5:00 pm]</span></dd></div>
+  </dl>
+</div></section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <p><span lang="es">Este sitio es solo informativo y no constituye asesoramiento legal ni crea una relación abogado-cliente. No envíe información confidencial por este medio.</span><span lang="en">This site is for information only and is not legal advice, nor does it create an attorney-client relationship. Do not send confidential information through this site.</span></p>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><a class="brand" href="#top" style="color:#fff"><img src="assets/logo.png" alt="" width="65" height="44"><span>Velazquez Grau<small>LAW FIRM</small></span></a><p><span class="ph">[Dirección, Caguas, Puerto Rico]</span></p></div>
+    <div><h4><span lang="es">Navegación</span><span lang="en">Navigation</span></h4><ul><li><a href="#areas"><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></a></li><li><a href="#equipo"><span lang="es">Equipo</span><span lang="en">Team</span></a></li><li><a href="#recursos"><span lang="es">Recursos</span><span lang="en">Resources</span></a></li><li><a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a></li></ul></div>
+    <div><h4><span lang="es">Contacto</span><span lang="en">Contact</span></h4><ul><li><a href="tel:+17870000000"><span class="ph">[787-000-0000]</span></a></li><li><span class="ph">[correo@dominio.com]</span></li></ul></div>
+  </div>
+  <div class="legal">
+    <p><span lang="es">Este sitio es solo informativo y no constituye asesoramiento legal ni crea una relación abogado-cliente. Los resultados de casos anteriores no garantizan resultados futuros.</span><span lang="en">This site is for information only and is not legal advice, nor does it create an attorney-client relationship. Past results do not guarantee future outcomes.</span></p>
     <p>© <span id="y">2026</span> Velazquez Grau Law Firm · Caguas, Puerto Rico</p>
   </div>
-</footer>
+</div></footer>
+
 <script>
 (function(){
-  var root=document.documentElement,key="vg-lang";
-  function set(l){
-    root.setAttribute("data-lang",l);root.lang=l;
-    var b=document.getElementById("lang");
-    if(b){b.textContent=l==="es"?"English":"Español";b.setAttribute("aria-label",l==="es"?"Switch to English":"Cambiar a español");}
-    var t=document.querySelector("title[data-"+l+"]");
-    if(t)document.title=t.getAttribute("data-"+l);
-  }
-  var saved="es";
-  try{saved=localStorage.getItem(key)||"es";}catch(e){}
-  set(saved);
-  var b=document.getElementById("lang");
-  if(b)b.addEventListener("click",function(){
-    var n=root.getAttribute("data-lang")==="es"?"en":"es";
-    set(n);try{localStorage.setItem(key,n);}catch(e){}
-  });
+ var r=document.documentElement,K="vg-lang",$=function(s,c){return(c||document).querySelector(s)},$$=function(s,c){return[].slice.call((c||document).querySelectorAll(s))};
+ function set(l){r.setAttribute("data-lang",l);r.lang=l;var b=$("#lang");b.textContent=l==="es"?"English":"Español";var t=$("title[data-"+l+"]");if(t)document.title=t.getAttribute("data-"+l)}
+ var s="es";try{s=localStorage.getItem(K)||"es"}catch(e){}set(s);
+ $("#lang").addEventListener("click",function(){var n=r.getAttribute("data-lang")==="es"?"en":"es";set(n);try{localStorage.setItem(K,n)}catch(e){}});
+ /* tabs */
+ var tabs=$$(".tab");
+ function pick(t,f){tabs.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on});if(f)t.focus()}
+ tabs.forEach(function(t,i){t.addEventListener("click",function(){pick(t)});t.addEventListener("keydown",function(e){var k=e.key,n=k==="ArrowDown"||k==="ArrowRight"?1:k==="ArrowUp"||k==="ArrowLeft"?-1:0;if(n){e.preventDefault();pick(tabs[(i+n+tabs.length)%tabs.length],1)}})});
+ /* mobile menu */
+ var h=$(".site-header"),m=$("#menu");
+ m.addEventListener("click",function(){var o=h.classList.toggle("open");m.setAttribute("aria-expanded",o)});
+ $$("nav a").forEach(function(a){a.addEventListener("click",function(){h.classList.remove("open");m.setAttribute("aria-expanded",false)})});
+ /* header shadow */
+ addEventListener("scroll",function(){h.classList.toggle("stuck",scrollY>10)},{passive:true});
+ /* reveal on scroll */
+ var rv=$$(".rv");
+ if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});rv.forEach(function(e){io.observe(e)})}else rv.forEach(function(e){e.classList.add("in")});
+ $("#y").textContent=new Date().getFullYear();
 })();
-
 </script>
-<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
 </body>
 </html>
