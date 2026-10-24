@@ -61,8 +61,8 @@ nav a:hover{color:#fff;border-color:var(--steel)}
 .tri polygon+polygon{stroke:var(--grey);opacity:.7}
 .facts{border-top:1px solid rgba(196,202,214,.22);position:relative}
 .facts .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
-.facts div{padding:26px 24px 26px 0;display:flex;align-items:baseline;gap:16px}
-.facts div+div{padding-left:28px;border-left:1px solid rgba(196,202,214,.22)}
+.facts .wrap>div{padding:26px 24px 26px 0;display:flex;align-items:center;gap:18px}
+.facts .wrap>div+div{padding-left:28px;border-left:1px solid rgba(196,202,214,.22)}
 .facts b{font-family:var(--serif);font-weight:400;font-size:2.3rem;color:#fff;line-height:1}
 .facts span{font-size:.85rem;color:var(--steel);line-height:1.35}
 
@@ -150,10 +150,11 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
  .intro .wrap,.attorney .wrap,.contact .wrap,.tabwrap,.steps,.cards,.fgrid{grid-template-columns:1fr}
  .tabs{flex-direction:row;overflow-x:auto}.tab{white-space:nowrap;padding:20px 22px;font-size:1.15rem;border-bottom:0;border-right:1px solid #dde1e9}
  .tab:hover,.tab[aria-selected=true]{padding-left:22px}.tab[aria-selected=true]::after{right:0;left:0;top:auto;bottom:0;width:auto;height:3px}
- .facts .wrap{grid-template-columns:1fr}.facts div+div{padding-left:0;border-left:0;border-top:1px solid rgba(196,202,214,.22)}
+ .facts .wrap{grid-template-columns:1fr}.facts .wrap>div+div{padding-left:0;border-left:0;border-top:1px solid rgba(196,202,214,.22)}
  .tri{opacity:.22;right:-35%}.portrait{max-width:340px}
  .util .hide-sm{display:none}
 }
+.facts b{min-width:3.4rem;display:inline-block}
 nav a[aria-current]{color:#fff;border-color:var(--steel)}
 nav a,.bar .btn,.brand span{white-space:nowrap}
 nav ul{gap:26px}.brand span{font-size:1.15rem}
@@ -216,7 +217,7 @@ nav ul{gap:26px}.brand span{font-size:1.15rem}
   <div class="wrap main">
     <div class="kicker" style="color:var(--steel)"><span lang="es">Abogados · Caguas, Puerto Rico</span><span lang="en">Attorneys · Caguas, Puerto Rico</span></div>
     <h1><span lang="es">Defendemos <em>su hogar</em> y sus derechos.</span><span lang="en">We defend <em>your home</em> and your rights.</span></h1>
-    <p class="sub"><span lang="es">Más de 20 años de práctica en Caguas. Representamos a propietarios que enfrentan una ejecución de hipoteca y atendemos asuntos de familia, civiles, penales y notariales.</span><span lang="en">Over 20 years of practice in Caguas. We represent homeowners facing foreclosure and handle family, civil, criminal and notarial matters.</span></p>
+    <p class="sub"><span lang="es">Representamos a propietarios que enfrentan una ejecución de hipoteca y atendemos asuntos civiles, penales, de familia y notariales.</span><span lang="en">We represent homeowners facing foreclosure and handle civil, criminal, family and notarial matters.</span></p>
     <div class="cta">
       <a class="btn btn-solid" href="tel:+17877442770"><span lang="es">Llamar ahora</span><span lang="en">Call now</span></a>
       <a class="btn btn-line" href="mailto:velazquezgraulaw@gmail.com?subject=Solicitud%20de%20consulta">Email</a>
@@ -241,22 +242,16 @@ nav ul{gap:26px}.brand span{font-size:1.15rem}
   <h2><span lang="es">Representación en los asuntos que más importan.</span><span lang="en">Representation in the matters that matter most.</span></h2></div>
   <div class="tabwrap rv">
     <div class="tabs" role="tablist" aria-orientation="vertical">
-      <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true"><b>01</b><span lang="es">Defensa contra ejecuciones</span><span lang="en">Foreclosure defense</span></button>
-      <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><b>02</b><span lang="es">Derecho de familia</span><span lang="en">Family law</span></button>
-      <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><b>03</b><span lang="es">Derecho civil</span><span lang="en">Civil law</span></button>
-      <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><b>04</b><span lang="es">Derecho penal</span><span lang="en">Criminal law</span></button>
-      <button class="tab" role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1"><b>05</b><span lang="es">Testamentos y notaría</span><span lang="en">Wills and notarial work</span></button>
+      <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true"><b>01</b><span lang="es">Defensa Contra Ejecuciones</span><span lang="en">Foreclosure Defense</span></button>
+      <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><b>02</b><span lang="es">Derecho Civil</span><span lang="en">Civil Law</span></button>
+      <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><b>03</b><span lang="es">Derecho Penal</span><span lang="en">Criminal Law</span></button>
+      <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><b>04</b><span lang="es">Derecho de Familia</span><span lang="en">Family Law</span></button>
+      <button class="tab" role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1"><b>05</b><span lang="es">Testamentos y Notaría</span><span lang="en">Wills and Notarial Work</span></button>
     </div>
     <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
       <div class="tag"><span lang="es">Práctica principal</span><span lang="en">Flagship practice</span></div>
       <p><span lang="es">Si el banco presentó una demanda para quedarse con su casa, el tiempo cuenta. Evaluamos su caso, las defensas y las alternativas disponibles.</span><span lang="en">If the bank has filed to take your home, time matters. We evaluate your case, the defenses and the alternatives available.</span></p>
       <ul><li><span lang="es">Revisión de la demanda y del historial del préstamo</span><span lang="en">Review of the complaint and loan history</span></li><li><span lang="es">Representación ante el tribunal</span><span lang="en">Representation in court</span></li><li><span lang="es">Orientación sobre alternativas y mediación</span><span lang="en">Guidance on alternatives and mediation</span></li></ul>
-      <div><a class="btn btn-solid" href="contacto.html"><span lang="es">Solicitar una Consulta</span><span lang="en">Request a Consultation</span></a></div>
-    </div>
-    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-      <div class="tag"><span lang="es">Familia</span><span lang="en">Family</span></div>
-      <p><span lang="es">Asuntos familiares tratados con claridad, discreción y respeto.</span><span lang="en">Family matters handled with clarity, discretion and respect.</span></p>
-      <ul><li><span lang="es">Divorcio y separación</span><span lang="en">Divorce and separation</span></li><li><span lang="es">Custodia y relaciones filiales</span><span lang="en">Custody and parenting time</span></li><li><span lang="es">Pensiones alimentarias</span><span lang="en">Child and spousal support</span></li></ul>
       <div><a class="btn btn-solid" href="contacto.html"><span lang="es">Solicitar una Consulta</span><span lang="en">Request a Consultation</span></a></div>
     </div>
     <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
@@ -269,6 +264,12 @@ nav ul{gap:26px}.brand span{font-size:1.15rem}
       <div class="tag"><span lang="es">Penal</span><span lang="en">Criminal</span></div>
       <p><span lang="es">Defensa seria y confidencial en procesos criminales.</span><span lang="en">Serious, confidential defense in criminal proceedings.</span></p>
       <ul><li><span lang="es">Defensa ante cargos criminales</span><span lang="en">Defense against criminal charges</span></li><li><span lang="es">Representación en cada etapa del proceso</span><span lang="en">Representation at every stage</span></li><li><span lang="es">Orientación sobre sus derechos</span><span lang="en">Guidance on your rights</span></li></ul>
+      <div><a class="btn btn-solid" href="contacto.html"><span lang="es">Solicitar una Consulta</span><span lang="en">Request a Consultation</span></a></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <div class="tag"><span lang="es">Familia</span><span lang="en">Family</span></div>
+      <p><span lang="es">Asuntos familiares tratados con claridad, discreción y respeto.</span><span lang="en">Family matters handled with clarity, discretion and respect.</span></p>
+      <ul><li><span lang="es">Divorcio y separación</span><span lang="en">Divorce and separation</span></li><li><span lang="es">Custodia y relaciones filiales</span><span lang="en">Custody and parenting time</span></li><li><span lang="es">Pensiones alimentarias</span><span lang="en">Child and spousal support</span></li></ul>
       <div><a class="btn btn-solid" href="contacto.html"><span lang="es">Solicitar una Consulta</span><span lang="en">Request a Consultation</span></a></div>
     </div>
     <div class="panel" role="tabpanel" id="p5" aria-labelledby="t5" hidden>
@@ -285,7 +286,7 @@ nav ul{gap:26px}.brand span{font-size:1.15rem}
   <div class="portrait rv" role="img" aria-label="Placeholder portrait"><img src="assets/logo.png" alt=""></div>
   <div class="rv"><div class="kicker"><span lang="es">Abogado fundador</span><span lang="en">Founding attorney</span></div>
   <h2>Jose A. Velázquez Grau</h2>
-  <p><span lang="es">Con más de 20 años de práctica en Caguas, se ha dedicado a defender a propietarios frente a ejecuciones de hipoteca. Es notario y atiende también asuntos de familia, civiles y penales. <span class="ph">[Añadir formación, admisión al foro y distinciones]</span></span><span lang="en">With more than 20 years of practice in Caguas, he has devoted his career to defending homeowners against foreclosure. He is a notary and also handles family, civil and criminal matters. <span class="ph">[Add education, bar admissions and distinctions]</span></span></p>
+  <p><span lang="es">Con más de 20 años de experiencia, se ha dedicado a defender propietarios frente a ejecuciones de hipoteca. Es notario y atiende también asuntos civiles, penales y de familia. <span class="ph">[Añadir formación, admisión al foro y distinciones]</span></span><span lang="en">With more than 20 years of experience, he has devoted his career to defending homeowners against foreclosure. He is a notary and also handles civil, criminal and family matters. <span class="ph">[Add education, bar admissions and distinctions]</span></span></p>
   <a class="arrow" href="contacto.html"><span lang="es">Solicitar una Consulta</span><span lang="en">Request a Consultation</span></a></div>
 </div></section>
 
@@ -295,7 +296,7 @@ nav ul{gap:26px}.brand span{font-size:1.15rem}
   <ol class="steps rv">
     <li><h3><span lang="es">Consulta inicial</span><span lang="en">Initial consultation</span></h3><p><span lang="es">Nos cuenta su situación y trae los documentos que tenga a mano.</span><span lang="en">You tell us your situation and bring any documents you have.</span></p></li>
     <li><h3><span lang="es">Evaluación y plan</span><span lang="en">Evaluation and plan</span></h3><p><span lang="es">Le explicamos sus opciones, el alcance del caso y los honorarios.</span><span lang="en">We explain your options, the scope of the case and the fees.</span></p></li>
-    <li><h3><span lang="es">Representación</span><span lang="en">Representation</span></h3><p><span lang="es">Trabajamos su caso y lo mantenemos al tanto de cada avance.</span><span lang="en">We work your case and keep you informed at each step.</span></p></li>
+    <li><h3><span lang="es">Representación</span><span lang="en">Representation</span></h3><p><span lang="es">Trabajamos su caso con esfuerzo y dedicación y lo mantenemos constantemente al tanto de cada avance.</span><span lang="en">We work your case with effort and dedication and keep you constantly informed at each step.</span></p></li>
   </ol>
 </div></section>
 
