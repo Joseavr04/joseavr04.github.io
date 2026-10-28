@@ -61,8 +61,8 @@ nav a:hover{color:#fff;border-color:var(--steel)}
 .tri polygon+polygon{stroke:var(--grey);opacity:.7}
 .facts{border-top:1px solid rgba(196,202,214,.22);position:relative}
 .facts .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
-.facts div{padding:26px 24px 26px 0;display:flex;align-items:baseline;gap:16px}
-.facts div+div{padding-left:28px;border-left:1px solid rgba(196,202,214,.22)}
+.facts .wrap>div{padding:26px 24px 26px 0;display:flex;align-items:center;gap:18px}
+.facts .wrap>div+div{padding-left:28px;border-left:1px solid rgba(196,202,214,.22)}
 .facts b{font-family:var(--serif);font-weight:400;font-size:2.3rem;color:#fff;line-height:1}
 .facts span{font-size:.85rem;color:var(--steel);line-height:1.35}
 
@@ -150,11 +150,30 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
  .intro .wrap,.attorney .wrap,.contact .wrap,.tabwrap,.steps,.cards,.fgrid{grid-template-columns:1fr}
  .tabs{flex-direction:row;overflow-x:auto}.tab{white-space:nowrap;padding:20px 22px;font-size:1.15rem;border-bottom:0;border-right:1px solid #dde1e9}
  .tab:hover,.tab[aria-selected=true]{padding-left:22px}.tab[aria-selected=true]::after{right:0;left:0;top:auto;bottom:0;width:auto;height:3px}
- .facts .wrap{grid-template-columns:1fr}.facts div+div{padding-left:0;border-left:0;border-top:1px solid rgba(196,202,214,.22)}
+ .facts .wrap{grid-template-columns:1fr}.facts .wrap>div+div{padding-left:0;border-left:0;border-top:1px solid rgba(196,202,214,.22)}
  .tri{opacity:.22;right:-35%}.portrait{max-width:340px}
  .util .hide-sm{display:none}
 }
+.facts b{min-width:3.4rem;display:inline-block}
 nav a[aria-current]{color:#fff;border-color:var(--steel)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:26px}
+.pcard{background:var(--mist);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(11,21,48,.14)}
+.pimg{display:block;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(160deg,var(--navy2),var(--ink));position:relative}
+.pimg img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s}
+.pcard:hover .pimg img{transform:scale(1.04)}
+.pimg.nophoto::after{content:"";position:absolute;inset:0;background:url(assets/logo.png) center/46% no-repeat;opacity:.85}
+.pinfo{padding:22px 24px 26px;display:grid;gap:4px}
+.pinfo h3{font-size:1.4rem;line-height:1.2}.pinfo h3 a{text-decoration:none}.pinfo h3 a:hover{text-decoration:underline}
+.pinfo .role{color:var(--navy);font-weight:600}.pinfo .meta{color:var(--muted);font-size:.95rem}
+.pinfo .cl2{margin-top:12px;font-size:.92rem;display:grid;gap:2px}.pinfo .cl2 a{color:var(--navy);text-decoration:underline;overflow-wrap:anywhere}
+.profile{padding-block:clamp(48px,7vw,90px)}
+.profile .wrap{display:grid;grid-template-columns:4fr 7fr;gap:clamp(28px,6vw,90px);align-items:start}
+.profile .back{display:inline-block;margin-bottom:24px;color:var(--muted);font-size:.9rem;text-decoration:none}.profile .back:hover{color:var(--ink)}
+.profile p.bio{color:var(--muted);font-size:1.05rem;max-width:38em;margin:18px 0 8px}
+.profile h3.sub{font-size:1.15rem;margin:26px 0 4px}
+.chips.lt{margin-top:12px}.chips.lt a{border-color:var(--navy);color:var(--navy)}.chips.lt a:hover{background:var(--navy);color:#fff}
+@media (max-width:900px){.profile .wrap{grid-template-columns:1fr}.profile .pimg{max-width:340px}}
 nav a,.bar .btn,.brand span{white-space:nowrap}
 nav ul{gap:26px}.brand span{font-size:1.15rem}
 @media (max-width:1040px){
@@ -211,13 +230,145 @@ nav ul{gap:26px}.brand span{font-size:1.15rem}
 <button class="menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="nav"><span lang="es">Menú</span><span lang="en">Menu</span></button>
 </div></header>
 <main id="main">
-<section class="page-hero"><svg class="tri" viewBox="0 0 600 520" aria-hidden="true"><polygon points="20,20 580,20 300,500" pathLength="1"/><polygon points="110,20 490,20 300,370" pathLength="1"/></svg><div class="wrap"><div class="kicker" style="color:var(--steel)"><span lang="es">Equipo</span><span lang="en">Team</span></div><h1><span lang="es">Las personas detrás de cada caso.</span><span lang="en">The people behind every case.</span></h1><p><span lang="es">Un abogado con más de 20 años de práctica y un equipo de apoyo dedicado.</span><span lang="en">An attorney with more than 20 years of practice and a dedicated support team.</span></p></div></section><section class="attorney"><div class="wrap"><div class="portrait rv" role="img" aria-label="Portrait placeholder"><img src="assets/logo.png" alt=""></div>
-<div class="rv"><div class="kicker"><span lang="es">Abogado fundador</span><span lang="en">Founding attorney</span></div><h2>Jose A. Velázquez Grau</h2>
-<p><span lang="es">Con más de 20 años de práctica en Caguas, se ha dedicado a defender a propietarios frente a ejecuciones de hipoteca. Es notario y atiende también asuntos de familia, civiles y penales.</span><span lang="en">With more than 20 years of practice in Caguas, he has devoted his career to defending homeowners against foreclosure. He is a notary and also handles family, civil and criminal matters.</span> <span class="ph"><span lang="es">[Añadir formación, admisión al foro y distinciones]</span><span lang="en">[Add education, bar admissions and distinctions]</span></span></p>
-<ul class="checks"><li><span lang="es">Defensa de propietarios ante ejecuciones de hipoteca</span><span lang="en">Defense of homeowners in foreclosure</span></li><li><span lang="es">Derecho de familia, civil y penal</span><span lang="en">Family, civil and criminal law</span></li><li><span lang="es">Trabajo notarial</span><span lang="en">Notarial work</span></li></ul><a class="btn btn-dark" href="contacto.html"><span lang="es">Solicitar una Consulta</span><span lang="en">Request a Consultation</span></a></div></div></section>
-<section class="areas"><div class="wrap"><div class="rv"><div class="kicker"><span lang="es">Equipo</span><span lang="en">Team</span></div><h2><span lang="es">Un equipo de apoyo legal y administrativo.</span><span lang="en">A legal and administrative support team.</span></h2></div>
-<div class="team rv"><div class="person"><h3><span class="ph"><span lang="es">[Nombre del segundo abogado]</span><span lang="en">[Second attorney’s name]</span></span></h3><p><span lang="es">Abogado/a de la firma. Añadir breve biografía y áreas de enfoque.</span><span lang="en">Attorney at the firm. Add a short bio and areas of focus.</span></p></div>
-<div class="person"><h3><span lang="es">Personal de apoyo</span><span lang="en">Support staff</span></h3><p><span lang="es">Paralegales y personal administrativo que coordinan documentos, citas y comunicación con los clientes.</span><span lang="en">Paralegals and administrative staff who coordinate documents, appointments and client communication.</span></p></div></div></div></section><section class="band"><div class="wrap"><h2><span lang="es">¿Necesita orientación legal?</span><span lang="en">Need legal guidance?</span></h2><a class="btn btn-solid" href="contacto.html"><span lang="es">Solicitar una Consulta</span><span lang="en">Request a Consultation</span></a></div></section>
+<section class="page-hero"><svg class="tri" viewBox="0 0 600 520" aria-hidden="true"><polygon points="20,20 580,20 300,500" pathLength="1"/><polygon points="110,20 490,20 300,370" pathLength="1"/></svg><div class="wrap"><div class="kicker" style="color:var(--steel)"><span lang="es">Equipo</span><span lang="en">Team</span></div><h1 id="ph-h"><span lang="es">Las personas detrás de cada caso.</span><span lang="en">The people behind every case.</span></h1><p id="ph-p"><span lang="es">Un abogado con más de 20 años de práctica y un equipo de apoyo dedicado.</span><span lang="en">An attorney with more than 20 years of practice and a dedicated support team.</span></p></div></section><div id="team-root"></div><noscript><div class="wrap" style="padding-block:40px"><a href="tel:+17877442770">(787) 744-2770</a> · <a href="mailto:velazquezgraulaw@gmail.com?subject=Solicitud%20de%20consulta">velazquezgraulaw@gmail.com</a></div></noscript><script>
+/* ==========================================================================
+   EQUIPO / TEAM  --  ESTA ES LA ÚNICA LISTA QUE NECESITA EDITAR
+   --------------------------------------------------------------------------
+   AÑADIR una persona: copie un bloque { ... }, (con su coma al final),
+     péguelo dentro de TEAM y cambie los datos.
+   QUITAR una persona: borre su bloque, o cambie  visible:true  a  visible:false
+     (así queda guardada pero no se muestra).
+   EDITAR: cambie el texto entre comillas "...". Mantenga las comillas y comas.
+   FOTO: guarde la foto en  assets/team/  y escriba su nombre en  photo:
+     (jpg, ~800x1000 px, de retrato). Sin foto se muestra el logo.
+   Todo texto entre corchetes [así] se marca en amarillo = falta completar.
+   areas puede incluir: "ejecuciones","civil","penal","familia","notaria"
+   ========================================================================== */
+var FIRM={phone:"(787) 744-2770",email:"velazquezgraulaw@gmail.com",place:{es:"Caguas, Puerto Rico",en:"Caguas, Puerto Rico"}};
+var AREAS={
+  ejecuciones:{es:"Defensa Contra Ejecuciones",en:"Foreclosure Defense"},
+  civil:{es:"Derecho Civil",en:"Civil Law"},
+  penal:{es:"Derecho Penal",en:"Criminal Law"},
+  familia:{es:"Derecho de Familia",en:"Family Law"},
+  notaria:{es:"Testamentos y Notaría",en:"Wills and Notarial Work"}
+};
+var TEAM=[
+  {
+    id:"jose-velazquez-grau", visible:true,
+    name:"Jose A. Velázquez Grau",
+    role:{es:"Abogado fundador y notario", en:"Founding attorney and notary"},
+    photo:"assets/team/jose-velazquez-grau.jpg",
+    phone:"(787) 744-2770", email:"velazquezgraulaw@gmail.com",
+    areas:["ejecuciones","civil","penal","familia","notaria"],
+    bio:{es:"Con más de 20 años de experiencia, se ha dedicado a defender propietarios frente a ejecuciones de hipoteca. Es notario y atiende también asuntos civiles, penales y de familia.",
+         en:"With more than 20 years of experience, he has devoted his career to defending homeowners against foreclosure. He is a notary and also handles civil, criminal and family matters."},
+    credentials:[
+      {es:"[Añadir formación académica]", en:"[Add education]"},
+      {es:"[Añadir admisión al foro]", en:"[Add bar admissions]"},
+      {es:"[Añadir distinciones]", en:"[Add distinctions]"}
+    ]
+  },
+  {
+    id:"persona-2", visible:true,
+    name:"Persona #2",
+    role:{es:"Abogado/a", en:"Attorney"},
+    photo:"",
+    phone:"", email:"",
+    areas:["civil","familia"],
+    bio:{es:"[Breve biografía]", en:"[Short bio]"},
+    credentials:[]
+  },
+  {
+    id:"persona-3", visible:true,
+    name:"Persona #3",
+    role:{es:"Paralegal", en:"Paralegal"},
+    photo:"",
+    phone:"", email:"",
+    areas:[],
+    bio:{es:"[Breve biografía]", en:"[Short bio]"},
+    credentials:[]
+  },
+  {
+    id:"persona-4", visible:true,
+    name:"Persona #4",
+    role:{es:"Paralegal y administración", en:"Paralegal and administration"},
+    photo:"",
+    phone:"", email:"",
+    areas:[],
+    bio:{es:"[Breve biografía]", en:"[Short bio]"},
+    credentials:[]
+  },
+  {
+    id:"persona-5", visible:true,
+    name:"Persona #5",
+    role:{es:"Recepcionista", en:"Receptionist"},
+    photo:"",
+    phone:"", email:"",
+    areas:[],
+    bio:{es:"[Breve biografía]", en:"[Short bio]"},
+    credentials:[]
+  },
+  {
+    id:"persona-6", visible:true,
+    name:"Persona #6",
+    role:{es:"Asistente legal", en:"Legal assistant"},
+    photo:"",
+    phone:"", email:"",
+    areas:[],
+    bio:{es:"[Breve biografía]", en:"[Short bio]"},
+    credentials:[]
+  },
+  /* ---- PLANTILLA EN BLANCO: copie este bloque para añadir a otra persona ---- */
+  {
+    id:"nueva-persona", visible:false,
+    name:"[Nombre]",
+    role:{es:"[Cargo]", en:"[Title]"},
+    photo:"",
+    phone:"", email:"",
+    areas:[],
+    bio:{es:"[Breve biografía]", en:"[Short bio]"},
+    credentials:[]
+  }
+];
+
+/* ------------------------- código (no necesita editarlo) ------------------------- */
+(function(){
+  var esc=function(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")};
+  var one=function(t){t=esc(t);return /^\[/.test(t)?'<span class="ph">'+t+'</span>':t};
+  var bi=function(o){return '<span lang="es">'+one(o.es)+'</span><span lang="en">'+one(o.en)+'</span>'};
+  var list=TEAM.filter(function(p){return p.visible!==false});
+  var id=new URLSearchParams(location.search).get("p");
+  var me=list.filter(function(p){return p.id===id})[0];
+  var root=document.getElementById("team-root");
+  var tel=function(p){return "tel:+1"+(p.phone||FIRM.phone).replace(/\D/g,"")};
+  var mail=function(p){return "mailto:"+(p.email||FIRM.email)};
+  function pic(p,tag,href){
+    var open=tag==="a"?'<a class="pimg'+(p.photo?'':' nophoto')+'" href="'+href+'" aria-label="'+esc(p.name)+'">':'<div class="pimg'+(p.photo?'':' nophoto')+'">';
+    var img=p.photo?'<img src="'+esc(p.photo)+'" alt="'+esc(p.name)+'" loading="lazy" onerror="this.parentNode.classList.add(\'nophoto\');this.remove()">':'';
+    return open+img+(tag==="a"?'</a>':'</div>');
+  }
+  function card(p){
+    var h="equipo.html?p="+encodeURIComponent(p.id);
+    return '<article class="pcard">'+pic(p,"a",h)+'<div class="pinfo"><h3><a href="'+h+'">'+one(p.name)+'</a></h3>'+
+      '<div class="role">'+bi(p.role)+'</div><div class="meta">'+bi(FIRM.place)+'</div>'+
+      '<div class="cl2"><span>Tel: <a href="'+tel(p)+'">'+esc(p.phone||FIRM.phone)+'</a></span><a href="'+mail(p)+'">'+esc(p.email||FIRM.email)+'</a></div></div></article>';
+  }
+  if(me){
+    document.getElementById("ph-h").textContent=me.name;
+    document.getElementById("ph-p").innerHTML=bi(me.role);
+    var t=document.querySelector("title");
+    t.setAttribute("data-es",me.name+" | Velazquez Grau Law Firm");t.setAttribute("data-en",me.name+" | Velazquez Grau Law Firm");
+    document.title=me.name+" | Velazquez Grau Law Firm";
+    var creds=(me.credentials||[]).length?'<h3 class="sub"><span lang="es">Formación y admisiones</span><span lang="en">Education and admissions</span></h3><ul class="checks" style="margin-top:12px">'+me.credentials.map(function(c){return '<li>'+bi(c)+'</li>'}).join('')+'</ul>':'';
+    var ar=(me.areas||[]).length?'<h3 class="sub"><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></h3><div class="chips lt">'+me.areas.map(function(k){return AREAS[k]?'<a href="areas.html#'+k+'">'+bi(AREAS[k])+'</a>':''}).join('')+'</div>':'';
+    root.innerHTML='<section class="profile"><div class="wrap">'+pic(me,"div")+'<div><a class="back" href="equipo.html"><span lang="es">← Volver al equipo</span><span lang="en">← Back to the team</span></a>'+
+      '<p class="bio" style="margin-top:0">'+bi(me.bio)+'</p>'+creds+ar+
+      '<div class="cta" style="margin-top:34px"><a class="btn btn-dark" href="contacto.html"><span lang="es">Solicitar una Consulta</span><span lang="en">Request a Consultation</span></a><a class="btn btn-out" href="'+tel(me)+'"><span lang="es">Llamar ahora</span><span lang="en">Call now</span></a><a class="btn btn-out" href="'+mail(me)+'">Email</a></div></div></div></section>';
+  }else{
+    root.innerHTML='<section><div class="wrap"><div class="pgrid">'+list.map(card).join('')+'</div></div></section>';
+  }
+})();
+</script><section class="band"><div class="wrap"><h2><span lang="es">¿Necesita orientación legal?</span><span lang="en">Need legal guidance?</span></h2><a class="btn btn-solid" href="contacto.html"><span lang="es">Solicitar una Consulta</span><span lang="en">Request a Consultation</span></a></div></section>
 </main>
 <footer><div class="wrap"><div class="fgrid">
 <div><a class="brand" href="index.html" style="color:#fff"><img src="assets/logo.png" alt="" width="65" height="44"><span>Velazquez Grau<small>LAW FIRM</small></span></a><p>Ave. Troche V-12, Urb. Delgado, Caguas, PR 00725</p><p><span lang="es">Lunes a Viernes, 8:00 am a 5:00 pm</span><span lang="en">Monday to Friday, 8:00 am to 5:00 pm</span></p></div>
